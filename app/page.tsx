@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { CheckCircle2, Sparkles, Users, TrendingUp, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function WaitlistPage() {
   const [email, setEmail] = useState('');
@@ -40,52 +41,57 @@ export default function WaitlistPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-shiftly-blanc via-white to-shiftly-gris/20">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-block mb-6">
-              <div className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#FF5900] to-[#CC9933] bg-clip-text text-transparent">
-                Hestia
-              </div>
+              <Image
+                src="/assets/logo-shiftly.png"
+                alt="Shiftly Logo"
+                width={200}
+                height={200}
+                className="mx-auto"
+                priority
+              />
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-shiftly-mauve mb-6">
               Révolutionnez le recrutement
               <br />
-              <span className="bg-gradient-to-r from-[#FF5900] to-[#CC9933] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-shiftly-violet to-shiftly-gold bg-clip-text text-transparent">
                 dans l'HCR
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-shiftly-marron max-w-2xl mx-auto mb-8">
               La première plateforme de matching intelligent qui connecte les talents freelance
               avec les meilleurs établissements d'hôtellerie et de restauration.
             </p>
 
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500 mb-12">
+            <div className="flex items-center justify-center gap-6 text-sm text-shiftly-marron mb-12">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#FF5900]" />
+                <Sparkles className="w-4 h-4 text-shiftly-violet" />
                 <span>Hospitalité</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#CC9933]" />
+                <CheckCircle2 className="w-4 h-4 text-shiftly-gold" />
                 <span>Fiabilité</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-[#FF5900]" />
+                <TrendingUp className="w-4 h-4 text-shiftly-violet" />
                 <span>Liberté</span>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12 border border-gray-100">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12 border border-shiftly-gris/30">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-shiftly-mauve mb-3">
                 Rejoignez la liste d'attente
               </h2>
-              <p className="text-gray-600">
-                Soyez parmi les premiers à découvrir Hestia lors de notre lancement
+              <p className="text-shiftly-marron">
+                Soyez parmi les premiers à découvrir Shiftly lors de notre lancement
               </p>
             </div>
 
@@ -99,13 +105,13 @@ export default function WaitlistPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     disabled={status === 'loading'}
-                    className="h-12 text-base border-gray-300 focus:border-[#FF5900] focus:ring-[#FF5900]"
+                    className="h-12 text-base border-shiftly-gris focus:border-shiftly-violet focus:ring-shiftly-violet"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="h-12 px-8 text-base font-semibold bg-gradient-to-r from-[#FF5900] to-[#CC9933] hover:from-[#E54F00] hover:to-[#B88A2E] text-white transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50"
+                  className="h-12 px-8 text-base font-semibold bg-gradient-to-r from-shiftly-violet to-shiftly-gold hover:from-shiftly-mauve hover:to-shiftly-gold/90 text-white transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50"
                 >
                   {status === 'loading' ? (
                     <span className="flex items-center gap-2">
@@ -134,51 +140,51 @@ export default function WaitlistPage() {
               )}
             </form>
 
-            <div className="mt-8 text-center text-sm text-gray-500">
-              En vous inscrivant, vous acceptez de recevoir des mises à jour sur le lancement d'Hestia.
+            <div className="mt-8 text-center text-sm text-shiftly-marron">
+              En vous inscrivant, vous acceptez de recevoir des mises à jour sur le lancement de Shiftly.
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#FF5900] to-[#CC9933] flex items-center justify-center mb-4">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-shiftly-gris/30 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-shiftly-violet to-shiftly-gold flex items-center justify-center mb-4">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Matching Intelligent</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-lg font-bold text-shiftly-mauve mb-2">Matching Intelligent</h3>
+              <p className="text-shiftly-marron text-sm">
                 Un système de matching type Tinder pour trouver les opportunités parfaites
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#FF5900] to-[#CC9933] flex items-center justify-center mb-4">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-shiftly-gris/30 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-shiftly-violet to-shiftly-gold flex items-center justify-center mb-4">
                 <CheckCircle2 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Profils Certifiés</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-lg font-bold text-shiftly-mauve mb-2">Profils Certifiés</h3>
+              <p className="text-shiftly-marron text-sm">
                 Vérification et certification des freelances pour garantir la qualité
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#FF5900] to-[#CC9933] flex items-center justify-center mb-4">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-shiftly-gris/30 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-shiftly-violet to-shiftly-gold flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Communication Intégrée</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-lg font-bold text-shiftly-mauve mb-2">Communication Intégrée</h3>
+              <p className="text-shiftly-marron text-sm">
                 Outils de communication et suivi intégrés pour une collaboration fluide
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <p className="text-gray-500 text-sm">
+            <p className="text-shiftly-marron text-sm">
               Une question ? Contactez-nous à{' '}
               <a
-                href="mailto:contact@hestia.com"
-                className="text-[#FF5900] hover:text-[#CC9933] font-medium transition-colors"
+                href="mailto:contact@shiftly.com"
+                className="text-shiftly-violet hover:text-shiftly-gold font-medium transition-colors"
               >
-                contact@hestia.com
+                contact@shiftly.com
               </a>
             </p>
           </div>

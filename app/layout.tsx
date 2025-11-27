@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HCR wait list",
-  description: "Rejoindre la liste d'attente de HCR",
+  title: "Shiftly - Liste d'attente",
+  description: "Rejoignez la liste d'attente de Shiftly",
 };
 
 export default function RootLayout({

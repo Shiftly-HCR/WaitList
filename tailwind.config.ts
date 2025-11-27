@@ -60,6 +60,15 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Palette Shiftly
+        shiftly: {
+          violet: '#782478',
+          blanc: '#fcfaf7',
+          mauve: '#4c114f',
+          gris: '#bdaaa1',
+          marron: '#503342',
+          gold: '#cc9933',
+        },
       },
       keyframes: {
         'accordion-down': {
