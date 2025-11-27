@@ -67,7 +67,7 @@ const config: Config = {
           mauve: '#4c114f',
           gris: '#bdaaa1',
           marron: '#503342',
-          gold: '#cc9933',
+          gold: '#c9a3b8',
         },
       },
       keyframes: {
